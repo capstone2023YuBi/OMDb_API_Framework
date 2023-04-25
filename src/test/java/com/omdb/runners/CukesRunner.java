@@ -12,9 +12,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"
         },
         features = "src/test/resources/features",
-        glue = "com/cybertek/step_definitions",
+        glue = "com/omdb/stepsDef",
         dryRun = false,
-        tags = "@etsyWip"
+        tags = "@Test"
 )
 public class CukesRunner {
 }
