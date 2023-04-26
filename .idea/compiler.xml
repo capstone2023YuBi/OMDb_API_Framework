@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="OMDb_API_Framework" target="1.8" />
+      <module name="OMDb_API_Framework" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
