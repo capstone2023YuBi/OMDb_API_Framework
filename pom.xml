@@ -69,7 +69,7 @@
                 <version>3.0.0-M9</version>
                 <configuration>
                     <includes>
-                        <include>**/*ParallelRunner*.java</include>
+                        <include>**/*CukesRunner*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>alphabetical</runOrder>
