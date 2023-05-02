@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.capstone2023</groupId>
-    <artifactId>OMDb_API_Framework</artifactId>
+    <artifactId>OMDb_UI-API_Framework</artifactId>
     <version>1.0-SNAPSHOT</version>
     <!--    This is for instructing to always build with Java 8 anywhere-->
     <properties>
@@ -70,6 +70,7 @@
                 <configuration>
                     <includes>
                         <include>**/*CukesRunner*.java</include>
+                        <include>**/*APIRunner*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>alphabetical</runOrder>
@@ -79,6 +80,7 @@
                     <forkCount>2C</forkCount>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -109,6 +111,8 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+
+
         </plugins>
     </build>
 
