@@ -200,12 +200,76 @@ public class API_searchMovieWithParametersSteps {
 
     @Then("I should validate totalResult as {string}")
     public void iShouldValidateTotalResultAs(String expectedTotalResult) {
+        String path= "totalResults";
+        APIUtils.doValidation(response, path,expectedTotalResult);
     }
 
     @Then("I should validate response as {string}")
-    public void iShouldValidateResponseAs(String arg0) {
+    public void iShouldValidateResponseAs(String expectedResponse) {
+        String path= "Response";
+        APIUtils.doValidation(response, path,expectedResponse);
     }
 
+
+
+    //    ----------------< Search by Category type is <series> >----------------------
+
+    @When("I call get request to search a movie Omdb API using by category  type is series {string} name is {string}")
+    public void iCallGetRequestToSearchAMovieOmdbAPIUsingByCategoryTypeIsSeriesNameIs(String categoryType, String seriesName) {
+        response =
+                given()
+                        .log().all()
+                        .baseUri(baseUrl)
+                        .queryParam("apikey", apiKey)
+                        .queryParam("r","json")
+                        .queryParam("type",categoryType)
+                        .queryParam("s",seriesName).
+                        when()
+                        .get()
+                        .thenReturn();
+        response.prettyPrint();
+
+
+    }
+
+
+    //    ----------------< Search by Category type is <episode> >----------------------
+
+    @When("I call get request to Omdb API using title {string} and season {string} and episode {string}")
+    public void iCallGetRequestToOmdbAPIUsingTitleAndSeasonAndEpisode(String title, String season, String episode) {
+
+        response =
+                given()
+                        .log().all()
+                        .baseUri(baseUrl)
+                        .queryParam("apikey", apiKey)
+                        .queryParam("r","json")
+                        .queryParam("t",title)
+                        .queryParam("season",season)
+                        .queryParam("episode",episode).
+                        when()
+                        .get()
+                        .thenReturn();
+        response.prettyPrint();
+    }
+
+    @Then("I should validate season is {string}")
+    public void iShouldValidateSeasonIs(String season) {
+        String path= "Season";
+        APIUtils.doValidation(response, path,season);
+    }
+
+    @Then("I should validate episode is {string}")
+    public void iShouldValidateEpisodeIs(String episode) {
+        String path= "Episode";
+        APIUtils.doValidation(response, path,episode);
+    }
+
+    @Then("I should validate seriesID is {string}")
+    public void iShouldValidateSeriesIDIs(String seriesID) {
+        String path= "seriesID";
+        APIUtils.doValidation(response, path,seriesID);
+    }
 
 
 //    ****************** NEGATIVE SCENARIOS STEPS ************************
@@ -294,6 +358,103 @@ public class API_searchMovieWithParametersSteps {
         response.prettyPrint();
     }
 
+//    -----------------> Invalid Category=movie SCENARIOS STEPS <-----------------------
 
+
+    @When("I call get request to search a movie Omdb API using by category  type is movie {string} with an invalid name is {string}")
+    public void iCallGetRequestToSearchAMovieOmdbAPIUsingByCategoryTypeIsWithAnInvalidNameIs(String categoryType, String movieName) {
+        response =
+                given()
+                        .log().all()
+                        .baseUri(baseUrl)
+                        .queryParam("apikey", apiKey)
+                        .queryParam("r","json")
+                        .queryParam("type",categoryType)
+                        .queryParam("s",movieName).
+                        when()
+                        .get()
+                        .thenReturn();
+        response.prettyPrint();
+
+
+    }
+
+
+    @When("I call get request to search a movie Omdb API using by category  type is {string} with invalid double movie name {string} {string}")
+    public void iCallGetRequestToSearchAMovieOmdbAPIUsingByCategoryTypeIsWithInvalidDoubleMovieName (String categoryType, String movieName1, String movieName2) {
+        response =
+                given()
+                        .log().all()
+                        .baseUri(baseUrl)
+                        .queryParam("apikey", apiKey)
+                        .queryParam("r","json")
+                        .queryParam("type",categoryType)
+                        .queryParam("s",movieName1)
+                        .queryParam("s",movieName2).
+                        when()
+                        .get()
+                        .thenReturn();
+        response.prettyPrint();
+    }
+
+//  -----------------> Invalid Category=series SCENARIOS STEPS <-----------------------
+
+
+@When("I call get request to search a movie Omdb API using by category  type is series {string} with an invalid name is {string}")
+public void iCallGetRequestToSearchAMovieOmdbAPIUsingByCategoryTypeIsSeriesWithAnInvalidNameIs(String categoryType, String movieName) {
+        response =
+        given()
+        .log().all()
+        .baseUri(baseUrl)
+        .queryParam("apikey", apiKey)
+        .queryParam("r","json")
+        .queryParam("type",categoryType)
+        .queryParam("s",movieName).
+        when()
+        .get()
+        .thenReturn();
+        response.prettyPrint();
+
+
+        }
+
+
+@When("I call get request to search a movie Omdb API using by category  type is series {string} with invalid double movie name {string} {string}")
+public void iCallGetRequestToSearchAMovieOmdbAPIUsingByCategoryTypeIsSeriesWithInvalidDoubleMovieName (String categoryType, String movieName1, String movieName2) {
+        response =
+        given()
+        .log().all()
+        .baseUri(baseUrl)
+        .queryParam("apikey", apiKey)
+        .queryParam("r","json")
+        .queryParam("type",categoryType)
+        .queryParam("s",movieName1)
+        .queryParam("s",movieName2).
+        when()
+        .get()
+        .thenReturn();
+        response.prettyPrint();
+        }
+
+    //  -----------------> Invalid Category=episode SCENARIOS STEPS <-----------------------
+
+
+    @When("I call get request to Omdb API using title {string} and invalid season {string} or invalid episode {string}")
+    public void iCallGetRequestToOmdbAPIUsingTitleAndInvalidSeasonOrInvalidEpisode(String title, String season, String episode) {
+
+        response =
+                given()
+                        .log().all()
+                        .baseUri(baseUrl)
+                        .queryParam("apikey", apiKey)
+                        .queryParam("r","json")
+                        .queryParam("t",title)
+                        .queryParam("season",season)
+                        .queryParam("episode",episode).
+                        when()
+                        .get()
+                        .thenReturn();
+        response.prettyPrint();
+    }
 
 }
