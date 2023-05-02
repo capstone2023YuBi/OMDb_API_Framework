@@ -177,6 +177,37 @@ public class API_searchMovieWithParametersSteps {
         response.prettyPrint();
     }
 
+
+    //    ----------------< Search by Category type is <movie> >----------------------
+
+    @When("I call get request to search a movie Omdb API using by category  type is movie {string} name is {string}")
+    public void iCallGetRequestToSearchAMovieOmdbAPIUsingByCategoryTypeIsNameIs(String categoryType, String movieName) {
+        response =
+                given()
+                        .log().all()
+                        .baseUri(baseUrl)
+                        .queryParam("apikey", apiKey)
+                        .queryParam("r","json")
+                        .queryParam("type",categoryType)
+                        .queryParam("s",movieName).
+                        when()
+                        .get()
+                        .thenReturn();
+        response.prettyPrint();
+
+
+    }
+
+    @Then("I should validate totalResult as {string}")
+    public void iShouldValidateTotalResultAs(String expectedTotalResult) {
+    }
+
+    @Then("I should validate response as {string}")
+    public void iShouldValidateResponseAs(String arg0) {
+    }
+
+
+
 //    ****************** NEGATIVE SCENARIOS STEPS ************************
 //    -----------------> Invalid ImdbID SCENARIOS STEPS <-----------------------
 
@@ -262,6 +293,7 @@ public class API_searchMovieWithParametersSteps {
                         .thenReturn();
         response.prettyPrint();
     }
+
 
 
 }
