@@ -1,9 +1,11 @@
 package com.omdb.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.managers.OperaDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -26,29 +28,17 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
-                    driver.manage().window().fullscreen();
+                    driver.manage().window().maximize();
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
+                    driver.manage().window().maximize();
                     break;
-                case "chrome-headless":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
-                    break;
-                case "firefox-headless":
-                    WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver(new FirefoxOptions().setHeadless(true));
-                    break;
-                case "remote_chrome":
-
-                    try {
-                        ChromeOptions chromeOptions = new ChromeOptions();
-                        URL url = new URL("http://100.27.0.39:4444/wd/hub");
-                        driver = new RemoteWebDriver(url, chromeOptions);
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                    }
+                case "Edge":
+                    WebDriverManager.edgedriver().setup();
+                    driver = new EdgeDriver();
+                    driver.manage().window().maximize();
                     break;
                 default:
                     throw new RuntimeException("Wrong browser name:: " + browser);

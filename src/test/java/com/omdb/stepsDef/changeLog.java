@@ -15,9 +15,10 @@ public class changeLog {
     }
 
     @Then("User should see the ChangeLog page.")
-    public void user_should_see_the_change_log_page() {
+    public void user_should_see_the_change_log_page() throws InterruptedException {
         String actual= Driver.getDriver().getTitle();
         String expected= "OMDb API - The Open Movie Database";
         Assert.assertEquals(actual,expected);
+        Thread.sleep(3000);
     }
 }

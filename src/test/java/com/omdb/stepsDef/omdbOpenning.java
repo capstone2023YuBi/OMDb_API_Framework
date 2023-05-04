@@ -30,9 +30,10 @@ public class omdbOpenning {
     }
 
     @Then("User should see the Usage page.")
-    public void user_should_see_the_usage_page() {
+    public void user_should_see_the_usage_page() throws InterruptedException {
         String actualtitle= Driver.getDriver().getTitle();
         System.out.println("actualtitle = " + actualtitle);
         //Assert.assertTrue(actualtitle.contains(expectedTitle));
+        Thread.sleep(3000);
     }
 }

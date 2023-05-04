@@ -17,9 +17,10 @@ public class parameters {
     }
 
     @Then("User should see the parameters page.")
-    public void user_should_see_the_parameters_page() {
+    public void user_should_see_the_parameters_page() throws InterruptedException {
         String actual= Driver.getDriver().getTitle();
         String expected= "OMDb API - The Open Movie Database";
         Assert.assertEquals(actual,expected);
+        Thread.sleep(3000);
     }
 }
