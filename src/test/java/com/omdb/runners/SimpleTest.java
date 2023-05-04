@@ -1,4 +1,4 @@
-package com.omdb;
+package com.omdb.runners;
 
 import com.omdb.utilities.ConfigurationReader;
 import io.restassured.http.ContentType;

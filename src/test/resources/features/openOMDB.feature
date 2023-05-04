@@ -1,7 +1,8 @@
-
+@Smoke
 @odbc
 
-  Feature: Omdb
+Feature: Omdb
+
 
     Background: User is on the OMDB homepage
 
