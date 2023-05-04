@@ -15,10 +15,11 @@ public class examples {
     }
 
     @Then("User should see the examples page.")
-    public void user_should_see_the_examples_page() {
+    public void user_should_see_the_examples_page() throws InterruptedException {
         String actual= Driver.getDriver().getTitle();
         String expected= "OMDb API - The Open Movie Database";
         Assert.assertEquals(actual,expected);
+        Thread.sleep(3000);
     }
 
 }
