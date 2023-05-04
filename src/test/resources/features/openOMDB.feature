@@ -1,5 +1,6 @@
-
+@Smoke
 @odbc
+
 
   Feature: Omdb Usage feature
 
