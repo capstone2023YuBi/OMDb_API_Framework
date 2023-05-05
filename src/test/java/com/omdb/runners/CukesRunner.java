@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/omdb/stepsDef",
         dryRun = false,
-        tags = "@odbc"
+        tags = "@Smoke"
       // tags = "@API_Omdb"
 )
 public class CukesRunner {
