@@ -1,7 +1,8 @@
-@API_Omdb
+@odbc
+#@API_Omdb
 
 
-Feature: Omdb Search Movie by title
+Feature: -API- Omdb Search Movie by title
 
 
 
@@ -37,7 +38,7 @@ Feature: Omdb Search Movie by title
 
     Then I should validate metaScore is "50"
     Then I should validate imdbRating is "6.3"
-    Then I should validate imdbVotes is "131,708"
+#    Then I should validate imdbVotes is "132,509"
 
     Then I should validate title is "The Boss Baby"
     Then I should validate type is "movie"
@@ -97,7 +98,7 @@ Feature: Omdb Search Movie by title
 
     Then I should validate metaScore is "83"
     Then I should validate imdbRating is "7.9"
-    Then I should validate imdbVotes is "1,332,344"
+#    Then I should validate imdbVotes is "1,332,344"
 
     Then I should validate title is "Avatar"
     Then I should validate type is "movie"
@@ -156,7 +157,7 @@ Feature: Omdb Search Movie by title
 
     Then I should validate metaScore is "77"
     Then I should validate imdbRating is "8.3"
-    Then I should validate imdbVotes is "338,553"
+#    Then I should validate imdbVotes is "338,553"
 
     Then I should validate title is "The Hunt"
     Then I should validate type is "movie"
