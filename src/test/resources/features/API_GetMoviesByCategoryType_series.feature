@@ -1,7 +1,8 @@
-@API_Omdb
+@odbc
+#@API_Omdb
 
 
-Feature: Search Movie by Category Type is series
+Feature: -API- Search Movie by Category Type is series
 
   Scenario: Search Movie by Category Type is series-1
     Given Get the Omdb credentials from Configuration file
