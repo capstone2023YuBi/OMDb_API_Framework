@@ -13,4 +13,6 @@ public class Omdb_movieInformationPage {
 
     @FindBy(xpath = "(//select[@name='plot'])")
     public WebElement Plot;
+
+
 }

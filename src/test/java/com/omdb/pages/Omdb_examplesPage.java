@@ -12,4 +12,6 @@ public class Omdb_examplesPage {
 
     @FindBy(xpath = "(//a[.='Examples'])")
     public WebElement Examples;
+
+
 }

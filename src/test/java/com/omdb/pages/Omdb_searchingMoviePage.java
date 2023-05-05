@@ -14,6 +14,9 @@ public class Omdb_searchingMoviePage {
     @FindBy(xpath = "//input[@id='t']")
     public WebElement searchingMovie;
 
+    @FindBy(xpath = "(//input[@id='y']")
+    public WebElement year;
+
     @FindBy(xpath = "//button[@id='search-by-title-button']")
     public WebElement searchingButton;
 

@@ -2,6 +2,8 @@ package com.omdb.stepsDef;
 
 import com.omdb.pages.Omdb_searchingMoviePage;
 import com.omdb.utilities.Driver;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -13,18 +15,16 @@ import javax.swing.*;
 public class searchingMoviesWithTitle {
 
 Omdb_searchingMoviePage omdb_searchingMoviePage = new Omdb_searchingMoviePage();
+
+
     @When("typing {string} in the search box")
-    public void typing_back_to_the_future(String movie) throws InterruptedException {
-        omdb_searchingMoviePage.searchingMovie.sendKeys(movie+Keys.ENTER);
+    public void typing_in_the_search_box(String movie) throws InterruptedException {
+        omdb_searchingMoviePage.searchingMovie.sendKeys(movie);
+        Thread.sleep(4000);
         omdb_searchingMoviePage.searchingButton.click();
-        Thread.sleep(2000);
         omdb_searchingMoviePage.searchingReset.click();
-        //omdb_searchingMoviePage.searchingMovie.sendKeys(movie+Keys.BACK_SPACE);
-
-        //Actions actions = new Actions(Driver.getDriver());
-        //actions.moveToElement(omdb_searchingMoviePage.searchingMovie).perform();
-
     }
+
 
     @Then("User see the movie information")
 public void user_see_the_movie_information() throws InterruptedException {
@@ -36,5 +36,6 @@ public void user_see_the_movie_information() throws InterruptedException {
         Assert.assertTrue("Error message is not displayed! ",omdb_searchingMoviePage.searchingMovie.isDisplayed());
         Thread.sleep(3000);
     }
+
 
 }

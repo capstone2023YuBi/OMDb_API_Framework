@@ -35,5 +35,7 @@ public class omdbOpenning {
         System.out.println("actualtitle = " + actualtitle);
         //Assert.assertTrue(actualtitle.contains(expectedTitle));
         Thread.sleep(3000);
+
     }
+
 }
