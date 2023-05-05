@@ -13,4 +13,10 @@ public class Omdb_apiKeyPage {
 
     @FindBy(xpath = "(//a[.='API Key'])")
     public WebElement ApiKey;
+
+    @FindBy(xpath = "(//input[@id='Email'])")
+    public WebElement email;
+
+    @FindBy(xpath = "(//input[@type='submit'])")
+    public WebElement submit;
 }

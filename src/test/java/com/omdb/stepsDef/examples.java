@@ -19,7 +19,7 @@ public class examples {
         String actual= Driver.getDriver().getTitle();
         String expected= "OMDb API - The Open Movie Database";
         Assert.assertEquals(actual,expected);
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
 
 }
