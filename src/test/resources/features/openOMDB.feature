@@ -1,5 +1,5 @@
 @Smoke
-@odbc
+@odbc2
 
 Feature: Omdb
 

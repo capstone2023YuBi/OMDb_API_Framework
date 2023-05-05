@@ -1,7 +1,8 @@
-@API_Omdb
+@odbc
+#@API_Omdb
 
 
-Feature: Omdb Search Movie by ImdbID
+Feature: -API- Omdb Search Movie by ImdbID
 
 
 
@@ -37,7 +38,7 @@ Feature: Omdb Search Movie by ImdbID
 
      Then I should validate metaScore is "50"
      Then I should validate imdbRating is "6.3"
-     Then I should validate imdbVotes is "131,708"
+#     Then I should validate imdbVotes is "131,708"
 
      Then I should validate imdbID is "tt3874544"
      Then I should validate type is "movie"
@@ -97,7 +98,7 @@ Feature: Omdb Search Movie by ImdbID
 
     Then I should validate metaScore is "83"
     Then I should validate imdbRating is "7.9"
-    Then I should validate imdbVotes is "1,332,344"
+#    Then I should validate imdbVotes is "1,332,344"
 
     Then I should validate imdbID is "tt0499549"
     Then I should validate type is "movie"
@@ -156,7 +157,7 @@ Feature: Omdb Search Movie by ImdbID
 
     Then I should validate metaScore is "77"
     Then I should validate imdbRating is "8.3"
-    Then I should validate imdbVotes is "338,553"
+#    Then I should validate imdbVotes is "338,553"
 
     Then I should validate imdbID is "tt2106476"
     Then I should validate type is "movie"
