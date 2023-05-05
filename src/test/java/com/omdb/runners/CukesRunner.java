@@ -15,7 +15,8 @@ import org.junit.runner.RunWith;
         glue = "com/omdb/stepsDef",
         dryRun = false,
         tags = "@odbc"
-//        tags = "@API_Omdb_Smoke"
-)
+//        tags = "@UI_Test, @odbc, @API_Smoke, @Omdb_Regression"
+    )
+
 public class CukesRunner {
 }

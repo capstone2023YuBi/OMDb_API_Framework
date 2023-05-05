@@ -1,5 +1,4 @@
 @odbc
-@API_Smoke
 
 Feature: -API- Omdb Smoke Test
 

@@ -1,6 +1,4 @@
 @odbc
-@API_Omdb
-@Omdb_Regression
 
 Feature: -API- Omdb Regression Test
 
