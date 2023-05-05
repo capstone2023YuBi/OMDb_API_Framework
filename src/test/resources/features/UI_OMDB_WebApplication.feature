@@ -1,8 +1,7 @@
 @Smoke
 @odbc
 
-Feature: Omdb
-
+Feature: Omdb UI Testing
 
   Background: User is on the OMDB homepage
 
@@ -18,6 +17,7 @@ Feature: Omdb
   Scenario: Clicking Parameters button
     When Click the parameters button
     Then User should see the parameters page.
+
   Scenario: Clicking Examples button
     When Click the Examples button
     Then User should see the examples page.
@@ -28,6 +28,7 @@ Feature: Omdb
 
   Scenario Outline: Search
     When typing "<movies>" in the search box
+    When selecting the full button in the dropdown
     Then User see the movie information
     Examples: Test Data
 
@@ -39,9 +40,9 @@ Feature: Omdb
       |Deep Impact       |
       |Rocky IV          |
 
-  Scenario: Movie information short/full
-    When selecting the full button in the dropdown
-    Then User see full information about the movie
+#  Scenario: Movie information short/full
+#    When selecting the full button in the dropdown
+#    Then User see full information about the movie
 
   Scenario: Clicking ChangeLog button
     When Click the ChangeLog button

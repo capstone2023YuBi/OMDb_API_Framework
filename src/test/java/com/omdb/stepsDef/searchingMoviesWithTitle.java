@@ -19,10 +19,10 @@ Omdb_searchingMoviePage omdb_searchingMoviePage = new Omdb_searchingMoviePage();
 
     @When("typing {string} in the search box")
     public void typing_in_the_search_box(String movie) throws InterruptedException {
+        omdb_searchingMoviePage.searchingReset.click();
         omdb_searchingMoviePage.searchingMovie.sendKeys(movie);
         Thread.sleep(4000);
         omdb_searchingMoviePage.searchingButton.click();
-        omdb_searchingMoviePage.searchingReset.click();
     }
 
 
