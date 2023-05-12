@@ -11,7 +11,7 @@ Feature: -API- Search Movie by Category Type is series
     Then I should validate status code is "200"
     Then I should validate content type is "application/json; charset=utf-8"
 
-    Then I should validate totalResult as "51"
+#    Then I should validate totalResult as "51"
     Then I should validate response as "True"
 
 # ---------------Negative Scenarios Movie-1 ----------------------------

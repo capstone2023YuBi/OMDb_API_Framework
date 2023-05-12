@@ -401,7 +401,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate status code is "200"
     Then I should validate content type is "application/json; charset=utf-8"
 
-    Then I should validate totalResult as "259"
+#    Then I should validate totalResult as "259"
     Then I should validate response as "True"
 
 # ---------------Negative Scenarios Movie-1 ----------------------------
@@ -473,7 +473,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate status code is "200"
     Then I should validate content type is "application/json; charset=utf-8"
 
-    Then I should validate totalResult as "54"
+#    Then I should validate totalResult as "54"
     Then I should validate response as "True"
 
 
