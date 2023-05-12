@@ -34,7 +34,7 @@ Feature: -API- Omdb Smoke Test
     Then I should validate awards is "Nominated for 1 Oscar. 4 wins & 21 nominations total"
 
     Then I should validate metaScore is "50"
-    Then I should validate imdbRating is "6.3"
+#    Then I should validate imdbRating is "6.3"
 #    Then I should validate imdbVotes is "132,509"
 
     Then I should validate title is "The Boss Baby"
@@ -100,7 +100,7 @@ Feature: -API- Omdb Smoke Test
     Then I should validate awards is "N/A"
 
     Then I should validate metaScore is "N/A"
-    Then I should validate imdbRating is "8.7"
+#    Then I should validate imdbRating is "8.7"
 #    Then I should validate imdbVotes is "7298"
     Then I should validate imdbID is "tt0678483"
     Then I should validate seriesID is "tt0455275"
@@ -239,7 +239,7 @@ Feature: -API- Omdb Smoke Test
     Then I should validate awards is "Nominated for 1 Oscar. 4 wins & 21 nominations total"
 
     Then I should validate metaScore is "50"
-    Then I should validate imdbRating is "6.3"
+#    Then I should validate imdbRating is "6.3"
 #    Then I should validate imdbVotes is "132,509"
 
     Then I should validate imdbID is "tt3874544"

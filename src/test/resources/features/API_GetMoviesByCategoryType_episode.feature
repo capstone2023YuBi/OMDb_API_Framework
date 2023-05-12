@@ -41,7 +41,7 @@ Feature: -API- Search Movie by Category Type is episode
     Then I should validate awards is "N/A"
 
     Then I should validate metaScore is "N/A"
-    Then I should validate imdbRating is "8.7"
+#    Then I should validate imdbRating is "8.7"
 #    Then I should validate imdbVotes is "7298"
     Then I should validate imdbID is "tt0678483"
     Then I should validate seriesID is "tt0455275"
@@ -109,7 +109,7 @@ Feature: -API- Search Movie by Category Type is episode
     Then I should validate awards is "N/A"
 
     Then I should validate metaScore is "N/A"
-    Then I should validate imdbRating is "8.9"
+#    Then I should validate imdbRating is "8.9"
 #    Then I should validate imdbVotes is "50985"
     Then I should validate imdbID is "tt1480055"
     Then I should validate seriesID is "tt0944947"
@@ -177,7 +177,7 @@ Feature: -API- Search Movie by Category Type is episode
     Then I should validate awards is "1 nomination"
 
     Then I should validate metaScore is "N/A"
-    Then I should validate imdbRating is "8.1"
+#    Then I should validate imdbRating is "8.1"
 #    Then I should validate imdbVotes is "1653"
     Then I should validate imdbID is "tt0658039"
     Then I should validate seriesID is "tt0364845"

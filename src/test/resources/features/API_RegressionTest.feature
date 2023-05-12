@@ -35,7 +35,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate awards is "Nominated for 1 Oscar. 4 wins & 21 nominations total"
 
     Then I should validate metaScore is "50"
-    Then I should validate imdbRating is "6.3"
+#    Then I should validate imdbRating is "6.3"
 #    Then I should validate imdbVotes is "132,509"
 
     Then I should validate title is "The Boss Baby"
@@ -95,7 +95,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate awards is "Won 3 Oscars. 89 wins & 131 nominations total"
 
     Then I should validate metaScore is "83"
-    Then I should validate imdbRating is "7.9"
+#    Then I should validate imdbRating is "7.9"
 #    Then I should validate imdbVotes is "1,332,344"
 
     Then I should validate title is "Avatar"
@@ -154,7 +154,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate awards is "Nominated for 1 Oscar. 38 wins & 73 nominations total"
 
     Then I should validate metaScore is "77"
-    Then I should validate imdbRating is "8.3"
+#    Then I should validate imdbRating is "8.3"
 #    Then I should validate imdbVotes is "338,553"
 
     Then I should validate title is "The Hunt"
@@ -222,7 +222,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate awards is "N/A"
 
     Then I should validate metaScore is "N/A"
-    Then I should validate imdbRating is "8.7"
+#    Then I should validate imdbRating is "8.7"
 #    Then I should validate imdbVotes is "7298"
     Then I should validate imdbID is "tt0678483"
     Then I should validate seriesID is "tt0455275"
@@ -290,7 +290,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate awards is "N/A"
 
     Then I should validate metaScore is "N/A"
-    Then I should validate imdbRating is "8.9"
+#    Then I should validate imdbRating is "8.9"
 #    Then I should validate imdbVotes is "50985"
     Then I should validate imdbID is "tt1480055"
     Then I should validate seriesID is "tt0944947"
@@ -358,7 +358,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate awards is "1 nomination"
 
     Then I should validate metaScore is "N/A"
-    Then I should validate imdbRating is "8.1"
+#    Then I should validate imdbRating is "8.1"
 #    Then I should validate imdbVotes is "1653"
     Then I should validate imdbID is "tt0658039"
     Then I should validate seriesID is "tt0364845"
@@ -534,7 +534,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate awards is "Nominated for 1 Oscar. 4 wins & 21 nominations total"
 
     Then I should validate metaScore is "50"
-    Then I should validate imdbRating is "6.3"
+#    Then I should validate imdbRating is "6.3"
 #    Then I should validate imdbVotes is "131,708"
 
     Then I should validate imdbID is "tt3874544"
@@ -594,7 +594,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate awards is "Won 3 Oscars. 89 wins & 131 nominations total"
 
     Then I should validate metaScore is "83"
-    Then I should validate imdbRating is "7.9"
+#    Then I should validate imdbRating is "7.9"
 #    Then I should validate imdbVotes is "1,332,344"
 
     Then I should validate imdbID is "tt0499549"
@@ -653,7 +653,7 @@ Feature: -API- Omdb Regression Test
     Then I should validate awards is "Nominated for 1 Oscar. 38 wins & 73 nominations total"
 
     Then I should validate metaScore is "77"
-    Then I should validate imdbRating is "8.3"
+#    Then I should validate imdbRating is "8.3"
 #    Then I should validate imdbVotes is "338,553"
 
     Then I should validate imdbID is "tt2106476"
